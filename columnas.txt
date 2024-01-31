@@ -1,0 +1,30 @@
+hotel -- tipo de hotel
+is_canceled -- Indica si la reserva fue cancelada (True) o no (False)
+lead_time --Número de días entre la fecha de reserva y la fecha de llegada al hotel
+arrival_date_year --Año de llegada al hotel
+arrival_date_month --Mes de llegada al hotel
+arrival_date_day_of_month -- Día del mes de llegada al hotel
+stays_in_weekend_nights -- Número de noches que el cliente se quedó durante el fin de semana
+stays_in_week_nights -- Número de noches que el cliente se quedó durante la semana
+adults -- Número de adultos que acompañaban al cliente en la reserva
+children -- Número de niños que acompañaban la reserva
+babies -- Número de bebés que acompañaban al cliente en la reserva
+meal -- Tipo de comida incluida en la reserva (BB: Desayuno, HB: Media Pensión, FB: Pensión Completa)
+country -- Pais de origen del cliente
+market_segment -- Segmento de mercado al que pertenece la reserva
+distribution_channel -- Canal de distribución utilizado para realizar la reserva
+is_repetead_guest -- Indica si el cliente es un huésped repetido (1) o no (0)
+previous_cancellation -- Número de reservas canceladas por el cliente antes de esta reserva
+previous_bookings_not_canceled --Número de reservas no canceladas por el cliente antes de esta reserva
+reserved_room_type -- Tipo de hab reservada
+assigned_room_type -- Tipo de habitación asignada en la reserva
+booking_changes --Número de cambios realizados en la reserva
+agent -- Identificador del agente involucrado en la reserva
+company -- Identificador de la compañía involucrada en la reserva
+days_in_waiting_list -- Número de días que la reserva estuvo en lista de espera
+customer type --Tipo de cliente que realizó la reserva (Transient, Contract, Group, Transient-Party)
+adr -- Tarifa promedio diaria pagada por la reserva
+required_car_parking_spaces -- Número de espacios de estacionamiento requeridos por el cliente
+total_of_special_requests -- Número total de solicitudes especiales realizadas por el cliente
+reservation_status -- Estado de la reserva (Check-Out: Salida, Canceled: Cancelada)
+reservaion status date -- Fecha del estado de la reserva

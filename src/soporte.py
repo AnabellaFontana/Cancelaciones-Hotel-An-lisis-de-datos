@@ -33,5 +33,22 @@ df_cancelaciones.head()
 #%%
 #EDA: info, tipo de variables, nulos, value_counts
 def exploracion (dataframe):
-    
-    
+    print(dataframe.shape)
+    dataframe.info()
+
+    print(" ------ ")
+    nulos_esta_cat = dataframe[dataframe.columns[dataframe.isnull().any()]].select_dtypes(include = "O").columns
+    print("Las columnas categóricas que tienen nulos son : \n ")
+    print(nulos_esta_cat)
+    print(" ----- ")
+    nulos_cate_num = dataframe[dataframe.columns[dataframe.isnull().any()]].select_dtypes(exclude = "O").columns
+    print("Las columnas numéricas que tienen nulos son : \n ")
+    print(nulos_cate_num)
+
+    for columna in dataframe:
+        print(dataframe[columna].value_counts().head())
+
+#%%
+exploracion(df_cancelaciones)
+ 
+# %%
