@@ -26,9 +26,11 @@ pd.set_option('display.float_format', '{:.2f}'.format)
 import warnings
 warnings.filterwarnings("ignore")
 # %%
-df_cancelaciones = pd.read_csv("../fichero/hotel-bookings.csv", index_col=0)
-print("Leemos fichero")
+def lectura_fichero(nombre):
+  return pd.read_csv(nombre, index_col=0)
+ 
 # %%
+df_cancelaciones = lectura_fichero("../hotel-bookings.csv")
 df_cancelaciones.head()
 #%%
 #EDA: info, tipo de variables, nulos, value_counts
@@ -51,4 +53,18 @@ def exploracion (dataframe):
 #%%
 exploracion(df_cancelaciones)
  
+# %%
+df_cancelaciones.isnull().sum()
+# %%
+#Cambiar el formato de lead_time de float a int 
+#Cambiar  arrival date year de float a int 
+#cambiar arrival_date_week_number de float a int 
+#cambiar arrival_date_day_of_month de float a int 
+#cambiar de float a int stays_in_weekend_nights,stays_in_week_nights,adults,children, babies, is_repeated_guest
+#previous_cancellations, previous_bookings_not_canceled, booking_changes,agent,company
+# days_in_waiting_list , required_car_parking_spaces ,total_of_special_requests   
+#Cambiar reservation_status_date por formato fecha
+#Eliminar la columna 0
+df_cancelaciones.info()
+df_cancelaciones.head()
 # %%
