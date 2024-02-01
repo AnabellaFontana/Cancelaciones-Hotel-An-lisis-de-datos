@@ -65,6 +65,10 @@ df_cancelaciones.isnull().sum()
 # days_in_waiting_list , required_car_parking_spaces ,total_of_special_requests   
 #Cambiar reservation_status_date por formato fecha
 #Eliminar la columna 0
-df_cancelaciones.info()
-df_cancelaciones.head()
+#Mirar reseverve room type y 'assigned_room_type', completar una con otra. Son iguales
+# %%
+df_cancelaciones.select_dtypes(include= 'O')
+df_cancelaciones.duplicated().sum()
+#%%
+df_cancelaciones[df_cancelaciones.duplicated(keep=False)]
 # %%
